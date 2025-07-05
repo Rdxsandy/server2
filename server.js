@@ -47,7 +47,7 @@ const PORT = process.env.PORT || 5000;
 
 app.use(
   cors({
-    origin: "https://client2-rho.vercel.app", // Ensure this matches your frontend URL
+    origin: "https://client2-sooty.vercel.app", // Ensure this matches your frontend URL
     methods: ["GET", "POST", "DELETE", "PUT"],
     allowedHeaders: [
       "Content-Type",
