@@ -23,6 +23,7 @@ const MONGODB_URI = process.env.MONGO_URI;
 
 // Check if MONGO_URI is defined
 if (!MONGODB_URI) {
+
   console.error(
     "Error: MONGO_URI is not defined in the environment variables."
   );
@@ -31,6 +32,8 @@ if (!MONGODB_URI) {
   );
   process.exit(1); // Exit the process if essential variable is missing
 }
+
+
 
 // Create a database connection
 mongoose
@@ -44,7 +47,7 @@ const PORT = process.env.PORT || 5000;
 
 app.use(
   cors({
-    origin: "http://localhost:5173", // Ensure this matches your frontend URL
+    origin: "https://client2-rho.vercel.app", // Ensure this matches your frontend URL
     methods: ["GET", "POST", "DELETE", "PUT"],
     allowedHeaders: [
       "Content-Type",
